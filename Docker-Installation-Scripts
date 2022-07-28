@@ -1,4 +1,4 @@
-Install Docker on AWS Ubuntu:
+#Install Docker on AWS Ubuntu:
 #!/bin/bash
 
 Ubuntu Server 18.04 LTS (HVM),
@@ -12,10 +12,10 @@ sudo apt install docker.io -y
 sudo usermod -aG docker ubuntu 
 
 =================================== ssh -i "cicd.pem" ubuntu@ec2-18-209-168-14.compute-1.amazonaws.com ssh -i "cicd.pem" ubuntu@18.209.168.14   We created ubuntu server
+#We installed docker using user-data (Script)
 
-  We installed docker using user-data (Script)
-
-  The default user for ec2 ubuntu server is ubuntu  sudo -i
+#The default user for ec2 ubuntu server is ubuntu
+sudo -i
 
 echo "jenkins  ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/jenkins 
 
@@ -31,11 +31,11 @@ sudo usermod -aG docker ubuntu   = User user-data 
 
 NB: apt and apt-get are package managers for ubuntu servers  sudo docker info ssh -i "cicd.pem" ubuntu@ec2-54-196-212-249.compute-1.amazonaws.com ssh -i "cicd.pem" ubuntu@54.196.212.249 https://github.com/LandmakTechnology/maven-web-app/blob/master/ansible-setup # Check docker is installed or not
 
-   docker info
+docker info
 
-   docker --version =# You will get permison denied error as regular user 
+docker --version =# You will get permison denied error as regular user 
 
-    dosn't have permisions to execute docker commands.Add user to docker group. sudo usermod -aG docker $USER 
+dosn't have permisions to execute docker commands.Add user to docker group. sudo usermod -aG docker $USER 
 
 or 
 
